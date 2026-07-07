@@ -28,6 +28,7 @@ logs
 
 # Claude Code local settings
 .claude/settings.local.json
+.claude/scheduled_tasks.lock
 
 # stray file (Windows reserved device name, accidental redirect output)
 nul
