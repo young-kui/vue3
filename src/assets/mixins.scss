@@ -1,0 +1,18 @@
+@mixin placeholder($s: 14px, $c: #999) {
+  &::placeholder {
+    font-size: $s;
+    color: $c;
+  }
+  &::-webkit-input-placeholder {
+    font-size: $s;
+    color: $c;
+  }
+  &::-moz-placeholder {
+    font-size: $s;
+    color: $c;
+  }
+  &:-ms-input-placeholder {
+    font-size: $s;
+    color: $c;
+  }
+}

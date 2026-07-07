@@ -1,0 +1,51 @@
+.resizable-page {
+  padding: 20px;
+}
+
+.resizable-demo {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  min-height: 400px;
+  box-sizing: border-box;
+}
+
+.resizable-panel {
+  min-width: 120px;
+  min-height: 300px;
+  border: 2px solid #000;
+  box-sizing: border-box;
+  padding: 16px;
+  background-color: #fff;
+  overflow: auto;
+
+  &.left {
+    flex: 0 0 auto;
+  }
+
+  &.right {
+    flex: 1 1 auto;
+  }
+}
+
+.resizable-handle {
+  flex: 0 0 24px;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: col-resize;
+  background-color: #f2f2f2;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  user-select: none;
+
+  .handle-icon {
+    color: #333;
+    pointer-events: none;
+  }
+
+  &:hover {
+    background-color: #e0e0e0;
+  }
+}

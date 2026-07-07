@@ -1,0 +1,77 @@
+.lresize-columns {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.lresize-column {
+  flex: 1 1 50%;
+  min-width: 0;
+}
+
+.lresize-wrap {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border: 1px dashed #ccc;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.lresize-content {
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  background-color: #fff;
+  border: 2px solid #000;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.lresize-split-wrap {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+
+  .resizable-box {
+    border: 2px solid #000;
+    box-sizing: border-box;
+    background-color: #fff;
+  }
+
+  // LResize의 리사이즈 핸들은 박스를 클릭해야만 나타나므로(라이브러리 내부 상태),
+  // 항상 노출되는 커스텀 핸들(.lresize-split-handle)로 대체하기 위해 숨김 처리
+  .handle {
+    display: none !important;
+  }
+}
+
+.lresize-split-handle {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 24px;
+  border: 2px solid #000;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDE2IDI0Ij48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMyIgaGVpZ2h0PSIyNCIgcng9IjEuNSIgZmlsbD0iIzMzMzMzMyIvPjxyZWN0IHg9IjYuNSIgeT0iMCIgd2lkdGg9IjMiIGhlaWdodD0iMjQiIHJ4PSIxLjUiIGZpbGw9IiMzMzMzMzMiLz48cmVjdCB4PSIxMyIgeT0iMCIgd2lkdGg9IjMiIGhlaWdodD0iMjQiIHJ4PSIxLjUiIGZpbGw9IiMzMzMzMzMiLz48L3N2Zz4=');
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: col-resize;
+  z-index: 10;
+}
+
+.lresize-split-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  min-width: 120px;
+  min-height: 400px;
+  border: 2px solid #000;
+  box-sizing: border-box;
+  padding: 16px;
+  background-color: #fff;
+  overflow: auto;
+}

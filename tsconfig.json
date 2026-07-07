@@ -1,0 +1,15 @@
+{
+  // https://nuxt.com/docs/guide/concepts/typescript
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "noImplicitAny": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "#app": ["./.nuxt/types/nitro-nuxt.d.ts"],
+      "#imports": ["./.nuxt/types/auto-imports.d.ts"]
+    },
+    "types": ["@nuxt/schema"]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "vue-nuxt",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@fullcalendar/core": "^6.1.21",
+    "@fullcalendar/daygrid": "^6.1.21",
+    "@fullcalendar/interaction": "^6.1.21",
+    "@fullcalendar/list": "^6.1.21",
+    "@fullcalendar/timegrid": "^6.1.21",
+    "@fullcalendar/vue3": "^6.1.21",
+    "@vue-final-modal/nuxt": "^1.0.3",
+    "@vueform/multiselect": "^2.6.11",
+    "@vuepic/vue-datepicker": "^12.1.0",
+    "floating-vue": "^5.2.2",
+    "nuxt": "^4.3.0",
+    "swiper": "^12.0.3",
+    "vue": "^3.5.27",
+    "vue-final-modal": "^4.5.5",
+    "vue-router": "^4.6.4",
+    "vue-toastification": "^2.0.0-rc.5",
+    "vue3-resizable": "^1.0.0-alpha.3",
+    "vue3-treeselect": "^0.1.10",
+    "vuex": "^4.1.0"
+  },
+  "devDependencies": {
+    "@nuxt/schema": "^4.3.0",
+    "@nuxt/types": "^2.18.1",
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
+    "postcss-pxtorem": "^6.1.0",
+    "sass-embedded": "^1.97.3",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vue-tsc": "^3.2.4",
+    "vue3-lottie": "^3.3.1",
+    "vuedraggable": "^2.24.3"
+  }
+}

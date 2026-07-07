@@ -1,0 +1,190 @@
+@use './vars' as *;
+@use './mixins' as *;
+*{
+  scrollbar-arrow-color: $txt-color-909992;
+  scrollbar-3dlight-color: $txt-color-d8d8d8;
+  scrollbar-darkshadow-color: $txt-color-d8d8d8;
+  scrollbar-face-color: $txt-color-d8d8d8;
+  scrollbar-highlight-color: $txt-color-fff;
+  scrollbar-shadow-color: $txt-color-fff;
+  scrollbar-track-color: $txt-color-fff;
+  -ms-overflow-style:inherit;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 8px; height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: $bg-color-d8d8d8;
+}
+::-webkit-scrollbar-track {
+  box-shadow: #fff;
+}
+html {
+  overflow: visible !important;
+  height: 100vh;
+  /* 100% 기준 font-size */
+  @media screen and (min-width: 0) {font-size: 64.5% !important;}
+  @media screen and (min-width: 360px) {font-size: 64.5% !important;}
+  @media screen and (min-width: 375px) {font-size: 64.5% !important;}
+  @media screen and (min-width: 412px) {font-size: 64.5% !important;}
+  @media screen and (min-width: 414px) {font-size: 64.5% !important;}
+  @media screen and (min-width: 768px) {font-size: 62.5% !important;}
+  @media screen and (min-width: 768px) {font-size: 62.5% !important;}
+}
+html.fix-size{font-size: 62.5% !important;}
+
+body {
+  $font: 'noto','-apple-system','BlinkMacSystemFont','Malgun Gothic','맑은 고딕',helvetica,'Apple SD Gothic Neo','sans-serif';
+  -webkit-text-size-adjust: none;
+  height: inherit;
+  margin: 0;
+  padding:0 !important;
+  font: 12px/1.5 $font;
+  word-break: keep-all;
+  background: var(--bg-main);
+  color: var(--txt01);
+}
+:lang(ja) body{
+  $font: 'ヒラギノ角ゴ Pro W3', 'Meiryo UI', 'noto','-apple-system','BlinkMacSystemFont','Malgun Gothic', '맑은 고딕', arial, dotum, gulim, 'Calibri', 'Apple Gothic','Tahoma','MS PGothic' !important;
+  font: 12px/1.5 $font;
+  input[type="text"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="number"],
+  textarea {font-family:$font;}
+}
+:lang(zh) body{
+  $font: 'Microsoft YaHei', 'SimSun', 'noto','-apple-system','BlinkMacSystemFont','Malgun Gothic', '맑은 고딕', arial, dotum, gulim, 'Calibri', 'Apple Gothic','Tahoma','MS PGothic' !important;
+  font: 12px/1.5 $font;
+  $font-weight500: 400 !important;
+  input[type="text"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="number"],
+  textarea {font-family:$font;}
+}
+
+h1,h2,h3,h4,h5,h6,p,figure,ul,ol,dl,dd,fieldset,pre {margin: 0;}
+ol, ul, td, fieldset {padding: 0;}
+input, select, textarea, button, pre, a {
+  font: {
+    family: inherit;
+    size: inherit;
+    weight: inherit;
+  }
+  line-height: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+textarea {
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 0;
+  background: $bg-color-f2f2f4;
+  box-sizing: border-box;
+  outline: none !important;
+  resize: none;
+  vertical-align: top;
+  @include placeholder($s: 15px, $c: #acacac);
+}
+input[type="checkbox"],
+input[type="radio"],
+select {
+  border-radius: 0;
+  background: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+li {list-style: none;}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 0;
+  table-layout: fixed;
+}
+fieldset, img {border: 0;}
+img {
+  vertical-align: top;
+  max-width: 100%;
+}
+label, td img {vertical-align: middle;}
+h1,h2,h3,h4,h5,strong,b,th {font-weight: $font-weight700;}
+legend, caption, .blind {display: none !important;}
+address, em {font-style: normal;}
+button {
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  cursor: pointer;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  vertical-align: top;
+  > span {position: relative;}
+  &.btn:not(.line-type1, .line-type2, .line, .line2, .bt.plus):focus-visible {
+    outline:1px solid var(--primary01) !important;
+    background-color: transparent !important;
+    color: var(--txt08) !important;
+  }
+}
+pre {white-space: pre-line;}
+
+hr {margin: 10px 0; border: solid $border-color-d3d4d6; border-width: 1px 0 0;}
+
+.v-main{
+  min-height: 100vh;
+  &__wrap{
+    min-width: 1180px;
+    @media screen and (max-width:1380px) {
+      min-width: 1380px;
+    }
+  }
+}
+footer.footer{
+  position: relative;
+  z-index: 101;
+  height: 50px;
+}
+form.wid-100 {
+  display: inline-block; width: 100%;
+  .input-box{width:inherit;}
+}
+input[type="checkbox"]:focus-visible + label,
+input[type="radio"]:focus-visible + label{
+  outline: 1px solid var(--primary01);
+}
+select:focus-visible {
+  outline: 1px solid var(--primary01);
+}
+
+:is(.dp__input_focus, .multiselect-wrapper, .btn-set, .v-btn):focus-visible {
+  outline: 1px solid var(--primary01);
+}
+body .antialiased{background: var(--purple) !important}
+
+.recoding-view-area {
+  .recoding-view {
+    .recoding-graph {
+      .spectrum-container {
+        height: 28px;
+        padding: inherit;
+        border-radius: inherit;
+      }
+
+      .spectrum-bar {
+        width: 4px;
+        max-height: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+# Ignore files and directories from Nuxt.js build process
+
+# Layouts
+# layouts/admin.vue
+
+# Pages
+# pages/secret.vue
+
+# Components
+# components/internal/
+# 빌드 및 배포 디렉토리
+dist
+.output
+.nuxt
+
+# 의존성
+node_modules
+
+# 로그
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE
+.idea
+.cscode
+*.swp
+*.swo
+
+# OS
+.DS_Stroe
+Thumbs.db
+
+# Test files
+coverage
+.nyc_output
+**/*.test.js
+**/*.spec.js
+
+# Documentation
+docs/
+*.md
+
+# Temporary files
+*.tmp
+*.temp
