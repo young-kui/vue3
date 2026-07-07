@@ -1,75 +1,42 @@
-# Nuxt Minimal Starter
+# vue3 + ts + nuxt(vite)
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+[Nuxt 공식 문서](https://nuxt.com/docs/getting-started/introduction)에서 더 자세한 내용을 확인할 수 있습니다.
 
-## Setup
+## Requirements
 
-Make sure to install dependencies:
+- Node.js `v24.13.0`
+
+## Added Modules
+
+- **[@fullcalendar/vue3](https://fullcalendar.io/docs/vue)** (+ `core`, `daygrid`, `timegrid`, `list`, `interaction`) — 캘린더 UI 라이브러리. 샘플: `/calendar/calendar`
+- **[vue3-resizable](https://www.npmjs.com/package/vue3-resizable)** — 드래그로 크기를 조절할 수 있는 `LResize` 컴포넌트 제공. 샘플: `/resizable/vue3-resizable`
+
+## 설치
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
+## 개발 서버 실행
 
-Start the development server on `http://localhost:3000`:
+아래 명령으로 개발 서버를 실행합니다 (`http://localhost:7004`):
 
 ```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+## 빌드
 
-Build the application for production:
+배포용으로 빌드합니다:
 
 ```bash
-# npm
 npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
-Locally preview production build:
+빌드 결과물을 로컬에서 미리 확인할 수 있습니다:
 
 ```bash
-# npm
 npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+더 자세한 배포 방법은 [Nuxt 배포 문서](https://nuxt.com/docs/getting-started/deployment)를 참고하세요.
