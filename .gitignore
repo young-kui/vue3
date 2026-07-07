@@ -32,3 +32,6 @@ logs
 
 # stray file (Windows reserved device name, accidental redirect output)
 nul
+
+# local-only reference docs (not for the repo)
+docs/
