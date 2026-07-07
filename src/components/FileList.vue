@@ -40,9 +40,8 @@
           <td>{{ item.depth3 }}</td>
           <td class="start_date"><p v-for="(itemId, itemIndex) in item.s_id" :key="itemIndex">{{ itemId }}</p></td>
           <td class="link">
-            <a :href="item.link" target="_blank" rel="noopener noreferrer">{{ item.link }}</a>
+            <NuxtLink :to="item.link" target="_blank" rel="noopener noreferrer">{{ item.link }}</NuxtLink>
           </td>
-          <!-- <NuxtLink :to="item.link">{{ item.link }}</NuxtLink> -->
           <td class="ing start_date">{{ item.realm }}</td>
           <td class="start_date">{{ item.s_date }}</td>
           <td class="end_date">{{ item.e_date }}</td>
